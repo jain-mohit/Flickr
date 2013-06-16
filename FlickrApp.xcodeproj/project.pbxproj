@@ -25,6 +25,7 @@
 		373126F1176D63FF00BA5D17 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 373126F0176D63FF00BA5D17 /* CFNetwork.framework */; };
 		373126F3176D640E00BA5D17 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 373126F2176D640E00BA5D17 /* SystemConfiguration.framework */; };
 		373126F7176D647900BA5D17 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 373126F6176D647900BA5D17 /* libz.dylib */; };
+		373126FB176D65B800BA5D17 /* NSObject+JSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 373126FA176D65B800BA5D17 /* NSObject+JSON.m */; };
 		37716F34176C428A001DC686 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37716F33176C428A001DC686 /* UIKit.framework */; };
 		37716F36176C428A001DC686 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37716F35176C428A001DC686 /* Foundation.framework */; };
 		37716F38176C428A001DC686 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37716F37176C428A001DC686 /* CoreGraphics.framework */; };
@@ -99,6 +100,8 @@
 		373126F2176D640E00BA5D17 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		373126F4176D642600BA5D17 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		373126F6176D647900BA5D17 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		373126F9176D65B800BA5D17 /* NSObject+JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+JSON.h"; sourceTree = "<group>"; };
+		373126FA176D65B800BA5D17 /* NSObject+JSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+JSON.m"; sourceTree = "<group>"; };
 		37716F30176C428A001DC686 /* FlickrApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlickrApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37716F33176C428A001DC686 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		37716F35176C428A001DC686 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -211,9 +214,20 @@
 			path = FlickrApp/Reachability;
 			sourceTree = "<group>";
 		};
+		373126F8176D65B800BA5D17 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				373126F9176D65B800BA5D17 /* NSObject+JSON.h */,
+				373126FA176D65B800BA5D17 /* NSObject+JSON.m */,
+			);
+			name = Categories;
+			path = FlickrApp/Categories;
+			sourceTree = "<group>";
+		};
 		37716F27176C428A001DC686 = {
 			isa = PBXGroup;
 			children = (
+				373126F8176D65B800BA5D17 /* Categories */,
 				373126F6176D647900BA5D17 /* libz.dylib */,
 				373126F4176D642600BA5D17 /* libxml2.dylib */,
 				373126F2176D640E00BA5D17 /* SystemConfiguration.framework */,
@@ -423,6 +437,7 @@
 				373126E1176D5FB200BA5D17 /* ASINetworkQueue.m in Sources */,
 				373126E9176D62B100BA5D17 /* JSONKit.m in Sources */,
 				373126EB176D62B100BA5D17 /* Reachability.m in Sources */,
+				373126FB176D65B800BA5D17 /* NSObject+JSON.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

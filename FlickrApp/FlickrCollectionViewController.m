@@ -10,6 +10,7 @@
 #import "FlickrHeaderView.h"
 #import "FlickrViewCell.h"
 #import "FlickrImagePageController.h"
+#import "FlickrWebRequest.h"
 
 @interface FlickrCollectionViewController () {
     NSArray *flickrImages;
@@ -31,9 +32,16 @@
     return self;
 }
 
+-(void)fetchPicsFromFlickr {
+    FlickrWebRequest *webRequest = [FlickrWebRequest sharedInstance];
+    NSString *jsonData = [webRequest fetchPhoto];
+    NSLog(@"data is %@",jsonData);
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self fetchPicsFromFlickr];
     
     // Initialize recipe image array
     //NSArray *randomPics

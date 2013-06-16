@@ -9,8 +9,11 @@
 #import <Foundation/Foundation.h>
 #import "ASIHTTPRequest.h"
 
+
 @interface FlickrWebRequest : NSObject
 
 + (FlickrWebRequest*) sharedInstance;
+-(NSString *)serviceAvailable: (ASIHTTPRequest *)request;
+-(NSString*)fetchPhoto;
 
 @end
