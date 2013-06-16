@@ -1,23 +1,180 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2519" systemVersion="12A206j" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="PAu-7K-nta">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1856"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
-        <!--class Prefix:identifier View Controller-->
-        <scene sceneID="5">
+        <!--Flickr Collection View Controller - Flickr -->
+        <scene sceneID="Jwc-Cp-jkg">
             <objects>
-                <viewController id="2" customClass="FlickrViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="3">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
+                <collectionViewController autoresizesArchivedViewToFullSize="NO" id="ck9-nG-usO" customClass="FlickrCollectionViewController" sceneMemberID="viewController">
+                    <collectionView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" id="ZSG-eP-UHS">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ses-CG-hjX">
+                            <size key="itemSize" width="100" height="100"/>
+                            <size key="headerReferenceSize" width="50" height="50"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="9Ng-83-eZP" customClass="FlickrViewCell">
+                                <rect key="frame" x="0.0" y="50" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" tag="100" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rc6-0d-LDt">
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="90" id="WsY-Ed-5Dl"/>
+                                                <constraint firstAttribute="height" constant="90" id="Wsf-vl-pkP"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="rc6-0d-LDt" firstAttribute="centerX" secondItem="9Ng-83-eZP" secondAttribute="centerX" type="default" id="0Y7-aX-VNl"/>
+                                    <constraint firstItem="rc6-0d-LDt" firstAttribute="centerY" secondItem="9Ng-83-eZP" secondAttribute="centerY" type="default" id="7IS-9C-33t"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="recipeImageView" destination="rc6-0d-LDt" id="DaS-yp-OIj"/>
+                                    <segue destination="f0B-78-iPU" kind="push" identifier="showSelectedPhoto" id="xSH-OB-NzC"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HeaderView" id="YmT-EV-TKv" customClass="FlickrHeaderView">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <subviews>
+                                <label opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="left" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Db-a4-8Cz">
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="548" id="8GB-qZ-lVX"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="9Db-a4-8Cz" firstAttribute="trailing" secondItem="YmT-EV-TKv" secondAttribute="trailing" type="default" id="KB4-U7-Qc0"/>
+                                <constraint firstItem="9Db-a4-8Cz" firstAttribute="leading" secondItem="YmT-EV-TKv" secondAttribute="leading" type="default" id="dwW-9K-xei"/>
+                                <constraint firstItem="9Db-a4-8Cz" firstAttribute="centerY" secondItem="YmT-EV-TKv" secondAttribute="centerY" type="default" id="vLt-LC-siV"/>
+                            </constraints>
+                            <connections>
+                                <outlet property="title" destination="9Db-a4-8Cz" id="bje-sg-doW"/>
+                            </connections>
+                        </collectionReusableView>
+                        <connections>
+                            <outlet property="dataSource" destination="ck9-nG-usO" id="4ZA-kw-UKF"/>
+                            <outlet property="delegate" destination="ck9-nG-usO" id="5b6-Zy-1cf"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="Flickr " id="C5o-uI-1h3"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HBo-Tm-tsx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="214" y="733"/>
+        </scene>
+        <!--Flickr Image Page Controller-->
+        <scene sceneID="ZTb-Nm-yFB">
+            <objects>
+                <viewController id="f0B-78-iPU" customClass="FlickrImagePageController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9kW-Sg-3kd">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sqJ-qm-zSh">
+                                <connections>
+                                    <outlet property="delegate" destination="f0B-78-iPU" id="8ow-Fo-KyE"/>
+                                </connections>
+                            </scrollView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="RW3-wW-Nzr">
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="changePage:" destination="f0B-78-iPU" eventType="touchUpInside" id="aIN-IO-Fdi"/>
+                                </connections>
+                            </pageControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="RW3-wW-Nzr" firstAttribute="trailing" secondItem="9kW-Sg-3kd" secondAttribute="trailing" type="default" id="1n0-5W-vd1"/>
+                            <constraint firstAttribute="bottom" secondItem="sqJ-qm-zSh" secondAttribute="bottom" constant="31" id="20y-j1-Fh4"/>
+                            <constraint firstItem="RW3-wW-Nzr" firstAttribute="leading" secondItem="9kW-Sg-3kd" secondAttribute="leading" type="default" id="7aB-af-pya"/>
+                            <constraint firstItem="RW3-wW-Nzr" firstAttribute="bottom" secondItem="9kW-Sg-3kd" secondAttribute="bottom" type="default" id="c20-xa-MSs"/>
+                            <constraint firstItem="sqJ-qm-zSh" firstAttribute="leading" secondItem="9kW-Sg-3kd" secondAttribute="leading" type="default" id="e6K-fE-L7R"/>
+                            <constraint firstItem="sqJ-qm-zSh" firstAttribute="trailing" secondItem="9kW-Sg-3kd" secondAttribute="trailing" type="default" id="mX0-1k-pcy"/>
+                            <constraint firstItem="sqJ-qm-zSh" firstAttribute="top" secondItem="9kW-Sg-3kd" secondAttribute="top" type="default" id="uwc-IX-Irb"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="LeD-gv-xsX"/>
+                    <connections>
+                        <outlet property="pageControl" destination="RW3-wW-Nzr" id="Gec-N7-DVp"/>
+                        <outlet property="scrollView" destination="sqJ-qm-zSh" id="1xz-p6-d3Z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eR7-rg-4VU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="682" y="740"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="bkK-1K-YbS">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="PAu-7K-nta" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fIQ-gI-9n7">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="ck9-nG-usO" kind="relationship" relationship="rootViewController" id="Fwg-Gy-SF1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qLX-TJ-0pQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-285" y="740"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="FlickrCollectionViewController" superclassName="UICollectionViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FlickrCollectionViewController.h"/>
+        </class>
+        <class className="FlickrHeaderView" superclassName="UICollectionReusableView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FlickrHeaderView.h"/>
+            <relationships>
+                <relationship kind="outlet" name="title" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="FlickrImagePageController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FlickrImagePageController.h"/>
+            <relationships>
+                <relationship kind="action" name="changePage:"/>
+                <relationship kind="outlet" name="pageControl" candidateClass="UIPageControl"/>
+                <relationship kind="outlet" name="recipeImageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
+            </relationships>
+        </class>
+        <class className="FlickrViewCell" superclassName="UICollectionViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FlickrViewCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="recipeImageView" candidateClass="UIImageView"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="UICollectionReusableView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionReusableView.h"/>
+        </class>
+        <class className="UICollectionViewCell" superclassName="UICollectionReusableView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewCell.h"/>
+        </class>
+        <class className="UICollectionViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewController.h"/>
+        </class>
+        <class className="UICollectionViewFlowLayout" superclassName="UICollectionViewLayout">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewFlowLayout.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
