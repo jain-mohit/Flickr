@@ -7,7 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "ASIHTTPRequest.h"
 
 @interface FlickrWebRequest : NSObject
+
++ (FlickrWebRequest*) sharedInstance;
 
 @end
