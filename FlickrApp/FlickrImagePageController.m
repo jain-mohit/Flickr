@@ -37,38 +37,33 @@ static NSString *kImageKey = @"imageKey";
 
 -(void)setup {
      
-//    NSUInteger numberPages = self.imageArray.count;
-//    
-//    // view controllers are created lazily
-//    // in the meantime, load the array with placeholders which will be replaced on demand
-//    NSMutableArray *controllers = [[NSMutableArray alloc] init];
-//    for (NSUInteger i = 0; i < numberPages; i++)
-//    {
-//		[controllers addObject:[NSNull null]];
-//    }
-//    self.viewControllers = controllers;
-//    
-//    // a page is the width of the scroll view
-//    self.scrollView.pagingEnabled = YES;
-//    self.scrollView.contentSize =
-//    CGSizeMake(CGRectGetWidth(self.scrollView.frame) * numberPages, CGRectGetHeight(self.scrollView.frame));
-////    self.scrollView.showsHorizontalScrollIndicator = NO;
-////    self.scrollView.showsVerticalScrollIndicator = NO;
-//    self.scrollView.scrollsToTop = YES;
-//    self.scrollView.delegate = self;
-//    
-//    self.pageControl.numberOfPages = numberPages;
-//    
-//
-////    [self loadScrollViewWithPage: selectedPage];
-//    // pages are created on demand
-//    // load the visible page
-//    // load the page on either side to avoid flashes when the user starts scrolling
+    NSUInteger numberPages = self.imageArray.count;
     
-    int selectedPage = [self.selectedPage integerValue];
-   //== self.pageControl.currentPage = selectedPage;
-    [self loadAlbum];
-    [self loadRequiredPages:selectedPage];
+    // view controllers are created lazily
+    // in the meantime, load the array with placeholders which will be replaced on demand
+    NSMutableArray *controllers = [[NSMutableArray alloc] init];
+    for (NSUInteger i = 0; i < numberPages; i++)
+    {
+		[controllers addObject:[NSNull null]];
+    }
+    self.viewControllers = controllers;
+    
+    // a page is the width of the scroll view
+    self.scrollView.pagingEnabled = YES;
+    self.scrollView.contentSize =
+    CGSizeMake(CGRectGetWidth(self.scrollView.frame) * numberPages, CGRectGetHeight(self.scrollView.frame));
+    self.scrollView.scrollsToTop = YES;
+    self.scrollView.delegate = self;
+
+       int selectedPage = [self.selectedPage integerValue];
+       [self loadScrollViewWithPage: selectedPage];
+    // pages are created on demand
+    // load the visible page
+    // load the page on either side to avoid flashes when the user starts scrolling
+    
+ 
+  //  [self loadAlbum];
+
 
 }
 
