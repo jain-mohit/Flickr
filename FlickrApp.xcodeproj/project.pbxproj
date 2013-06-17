@@ -18,7 +18,6 @@
 		373126DF176D5FB200BA5D17 /* ASIHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 373126D2176D5FB200BA5D17 /* ASIHTTPRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		373126E0176D5FB200BA5D17 /* ASIInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 373126D6176D5FB200BA5D17 /* ASIInputStream.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		373126E1176D5FB200BA5D17 /* ASINetworkQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 373126D8176D5FB200BA5D17 /* ASINetworkQueue.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		373126E9176D62B100BA5D17 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 373126E4176D62B100BA5D17 /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		373126EA176D62B100BA5D17 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 373126E5176D62B100BA5D17 /* README.md */; };
 		373126EB176D62B100BA5D17 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 373126E8176D62B100BA5D17 /* Reachability.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		373126ED176D63A100BA5D17 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 373126EC176D63A100BA5D17 /* MobileCoreServices.framework */; };
@@ -476,7 +475,6 @@
 				373126DF176D5FB200BA5D17 /* ASIHTTPRequest.m in Sources */,
 				373126E0176D5FB200BA5D17 /* ASIInputStream.m in Sources */,
 				373126E1176D5FB200BA5D17 /* ASINetworkQueue.m in Sources */,
-				373126E9176D62B100BA5D17 /* JSONKit.m in Sources */,
 				373126EB176D62B100BA5D17 /* Reachability.m in Sources */,
 				373126FB176D65B800BA5D17 /* NSObject+JSON.m in Sources */,
 				37312A87176EB93800BA5D17 /* NSObject+SBJSON.m in Sources */,

@@ -91,7 +91,7 @@
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-						<string key="IBUIText">1</string>
+						<string key="IBUIText"/>
 						<reference key="IBUITextColor" ref="760946833"/>
 						<nil key="IBUIHighlightedColor"/>
 						<int key="IBUIBaselineAdjustment">1</int>
@@ -161,19 +161,19 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">pageNumberLabel</string>
-						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="653687138"/>
-					</object>
-					<int key="connectionID">34</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">numberTitle</string>
+						<string key="label">photoTitle</string>
 						<reference key="source" ref="372490531"/>
 						<reference key="destination" ref="1023934479"/>
 					</object>
-					<int key="connectionID">35</int>
+					<int key="connectionID">38</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">author</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="653687138"/>
+					</object>
+					<int key="connectionID">39</int>
 				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -529,7 +529,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">37</int>
+			<int key="maxID">39</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -537,21 +537,21 @@
 					<string key="className">FlickrImageViewController</string>
 					<string key="superclassName">UIViewController</string>
 					<dictionary class="NSMutableDictionary" key="outlets">
+						<string key="author">UILabel</string>
 						<string key="numberImage">UIImageView</string>
-						<string key="numberTitle">UILabel</string>
-						<string key="pageNumberLabel">UILabel</string>
+						<string key="photoTitle">UILabel</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
+						<object class="IBToOneOutletInfo" key="author">
+							<string key="name">author</string>
+							<string key="candidateClassName">UILabel</string>
+						</object>
 						<object class="IBToOneOutletInfo" key="numberImage">
 							<string key="name">numberImage</string>
 							<string key="candidateClassName">UIImageView</string>
 						</object>
-						<object class="IBToOneOutletInfo" key="numberTitle">
-							<string key="name">numberTitle</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="pageNumberLabel">
-							<string key="name">pageNumberLabel</string>
+						<object class="IBToOneOutletInfo" key="photoTitle">
+							<string key="name">photoTitle</string>
 							<string key="candidateClassName">UILabel</string>
 						</object>
 					</dictionary>

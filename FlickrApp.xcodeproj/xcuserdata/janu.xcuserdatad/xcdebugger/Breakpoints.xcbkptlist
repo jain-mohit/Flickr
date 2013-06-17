@@ -290,16 +290,29 @@
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
-         shouldBeEnabled = "Yes"
+         shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "FlickrApp/FlickrCollectionViewController.m"
-         timestampString = "393132776.412391"
+         timestampString = "393135846.260413"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "111"
-         endingLineNumber = "111"
-         landmarkName = "-collectionView:viewForSupplementaryElementOfKind:atIndexPath:"
+         startingLineNumber = "86"
+         endingLineNumber = "86"
+         landmarkName = "-parseData"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "FlickrApp/FlickrCollectionViewController.m"
+         timestampString = "393135846.260413"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "78"
+         endingLineNumber = "78"
+         landmarkName = "-parseData"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

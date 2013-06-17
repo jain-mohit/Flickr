@@ -35,8 +35,11 @@
 // set the label and background color when the view has finished loading
 - (void)viewDidLoad
 {
-    self.pageNumberLabel.text = [NSString stringWithFormat:@"Page %d", pageNumber + 1];
-    self.numberImage.image = [UIImage imageNamed:[self.images objectAtIndex:pageNumber]];
+  //  self.pageNumberLabel.text = [NSString stringWithFormat:@"Page %d", pageNumber + 1];
+  //  self.numberImage.image = [UIImage imageNamed:[self.images objectAtIndex:pageNumber]];
+    
+    self.photoTitle.text = @"";
+    self.author.text = @"";
 }
 
 - (void)didReceiveMemoryWarning

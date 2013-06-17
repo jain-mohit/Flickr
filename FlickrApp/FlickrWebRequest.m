@@ -10,7 +10,6 @@
 #import "ASIHTTPRequest.h"
 #import "ASIFormDataRequest.h"
 #import "NSObject+JSON.h"
-#import "JSONKit.h"
 
 #define BASE_URL @"http://api.flickr.com/services/feeds/photos_public.gne"
 

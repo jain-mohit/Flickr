@@ -10,9 +10,9 @@
 
 @interface FlickrImageViewController : UIViewController
 
-@property (nonatomic, strong) IBOutlet UILabel *pageNumberLabel;
+@property (nonatomic, strong) IBOutlet UILabel *photoTitle;
 
-@property (nonatomic, strong) IBOutlet UILabel *numberTitle;
+@property (nonatomic, strong) IBOutlet UILabel *author;
 @property (nonatomic, strong) IBOutlet UIImageView *numberImage;
 @property (nonatomic, strong) NSArray *images;
 
