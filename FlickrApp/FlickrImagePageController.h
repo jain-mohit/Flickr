@@ -17,7 +17,6 @@
 @property (nonatomic, strong) NSMutableArray *imageViews;
 @property (nonatomic, strong) NSArray *imageArray;
 @property (nonatomic, strong) NSMutableArray *viewControllers;
-@property (nonatomic, strong) IBOutlet UIPageControl *pageControl;
 @property(nonatomic, weak)IBOutlet UIScrollView *scrollView;
 @property(nonatomic, assign) NSInteger selectedPage;
 @property (nonatomic, strong) NSMutableArray *arrayWithImages;

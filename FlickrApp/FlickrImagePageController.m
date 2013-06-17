@@ -52,27 +52,15 @@
     CGSizeMake(CGRectGetWidth(self.view.frame) * numberPages, CGRectGetHeight(self.view.frame));
     self.scrollView.scrollsToTop = YES;
     self.scrollView.delegate = self;
-    
-    //       int selectedPage = [self.selectedPage integerValue];
+ 
     // pages are created on demand
     // load the visible page
     // load the page on either side to avoid flashes when the user starts scrolling
-    
-    
-    //  [self loadAlbum];
+
     CGRect visibleRect = CGRectMake(320*self.selectedPage, 0, 320, 504);
     [self.scrollView scrollRectToVisible:visibleRect animated:NO];
     
-    int selectedPage = self.selectedPage;
-    if (selectedPage > 0)
-    {
-        [self loadScrollViewWithPage:selectedPage-1];
-    }
-    if (selectedPage < self.imageArray.count)
-    {
-        [self loadScrollViewWithPage:selectedPage+1];
-    }
-    [self loadScrollViewWithPage:selectedPage];
+    [self loadRequiredPages:self.selectedPage];
     
 }
 
@@ -126,9 +114,7 @@
     }
     self.viewControllers = controllers;
     
-    //    [self loadRequiredPages:self.pageControl.currentPage];
     [self loadRequiredPages:self.selectedPage];
-    [self gotoPage:NO]; // remain at the same page (don't animate)
 }
 
 - (void)loadScrollViewWithPage:(NSUInteger)page
@@ -157,10 +143,6 @@
         [self addChildViewController:controller];
         [self.scrollView addSubview:controller.view];
         [controller didMoveToParentViewController:self];
-        
-        NSDictionary *numberItem = [self.imageArray objectAtIndex:page];
-        //     controller.numberImage.image = [UIImage imageNamed:[numberItem valueForKey:kImageKey]];
-        //     controller.numberTitle.text = [numberItem valueForKey:kNameKey];
     }
 }
 
@@ -171,7 +153,7 @@
     // switch the indicator when more than 50% of the previous/next page is visible
     CGFloat pageWidth = CGRectGetWidth(self.scrollView.frame);
     NSUInteger page = floor((self.scrollView.contentOffset.x - pageWidth / 2) / pageWidth) + 1;
-    self.pageControl.currentPage = page;
+  
     self.selectedPage = page;
     // load the visible page and the page on either side of it (to avoid flashes when the user starts scrolling)
     [self loadScrollViewWithPage:page - 1];
@@ -193,32 +175,11 @@
 - (void)scrollViewDidScroll:(UIScrollView *)sender {
     
     // Switch the indicator when more than 50% of the previous/next page is visible
-    CGFloat pageWidth = self.scrollView.frame.size.width;
-    int page = floor((self.scrollView.contentOffset.x - pageWidth / 2) / pageWidth) + 1;
-    NSLog(@"page...%d", page);
-    //    [self loadScrollViewWithPage:page];
+//    CGFloat pageWidth = self.scrollView.frame.size.width;
+//    int page = floor((self.scrollView.contentOffset.x - pageWidth / 2) / pageWidth) + 1;
+    NSLog(@"page...%d", self.selectedPage);
+    [self loadScrollViewWithPage:self.selectedPage];
 	
-}
-
-- (void)gotoPage:(BOOL)animated
-{
-    //    NSInteger page = self.pageControl.currentPage;
-    //    NSInteger page = [self.selectedPage integerValue];
-    
-    // load the visible page and the page on either side of it (to avoid flashes when the user starts scrolling)
-    [self loadRequiredPages:self.selectedPage];
-    
-	// update the scroll view to the appropriate page
-    CGRect bounds = self.scrollView.bounds;
-    bounds.origin.x = CGRectGetWidth(bounds) * self.selectedPage;
-    bounds.origin.y = 0;
-    [self.scrollView scrollRectToVisible:bounds animated:animated];
-}
-
-- (IBAction)changePage:(id)sender
-{
-    
-    [self gotoPage:YES];
 }
 
 

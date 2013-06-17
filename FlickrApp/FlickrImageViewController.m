@@ -44,13 +44,13 @@
      authorName = [authorName stringByReplacingOccurrencesOfString:@")" withString:@""];
     
     self.author.text = [NSString stringWithFormat:@"Author %@",authorName];
-//    NSURL *url = [NSURL URLWithString:[[[self.images objectAtIndex:pageNumber] objectForKey:@"media"] objectForKey:@"m"]];
-//                  
-//    NSData *data = [[NSData alloc] initWithContentsOfURL:url];
-//    
-//    UIImage *tmpImage = [[UIImage alloc] initWithData:data];
-//    self.numberImage.image = tmpImage;
     self.numberImage.image = [self.arrayWithImages objectAtIndex:pageNumber];
+//        NSURL *url = [NSURL URLWithString:[[[self.images objectAtIndex:pageNumber] objectForKey:@"media"] objectForKey:@"m"]];
+//    
+//        NSData *data = [[NSData alloc] initWithContentsOfURL:url];
+//    
+//        UIImage *tmpImage = [[UIImage alloc] initWithData:data];
+//        self.numberImage.image = tmpImage;
 }
 
 - (void)didReceiveMemoryWarning
