@@ -11,14 +11,9 @@
 #import "FlickrViewCell.h"
 #import "FlickrImagePageController.h"
 #import "FlickrWebRequest.h"
-#import "NSObject+JSON.h"
-#import "SBJson.h"
 #import "JSON/JSON.h"
 
 
-
-
-#define BASE_URL @"http://api.flickr.com/services/feeds/photos_public.gne"
 
 @interface FlickrCollectionViewController () {
     NSArray *flickrImages;
@@ -59,9 +54,7 @@
     [self fetchUsingASIHTTP];
     randomPics = [[NSMutableArray alloc]init];
     [self parseData];
-    // Initialize recipe image array
-    //NSArray *randomPics
-//    randomPics = [NSArray arrayWithObjects:@"egg_benedict.jpg", @"full_breakfast.jpg", @"ham_and_cheese_panini.jpg", @"ham_and_egg_sandwich.jpg", @"hamburger.jpg", @"instant_noodle_with_egg.jpg", @"japanese_noodle_with_pork.jpg", @"mushroom_risotto.jpg", @"noodle_with_bbq_pork.jpg", @"thai_shrimp_cake.jpg", @"vegetable_curry.jpg", @"angry_birds_cake.jpg", @"creme_brelee.jpg", @"green_tea.jpg", @"starbucks_coffee.jpg", @"white_chocolate_donut.jpg", nil];
+    
     flickrImages = [NSArray arrayWithObjects:randomPics, nil];
     
     UICollectionViewFlowLayout *collectionViewLayout = (UICollectionViewFlowLayout*)self.collectionView.collectionViewLayout;
@@ -83,14 +76,7 @@
     }
     
     NSLog(@"array is %@",randomPics);
-    // Iterate over the items. Each item is an object, hence a dictionary
-    for (NSDictionary *item in items) {
-        // Each item dictionary has an entry called "author_id", which is a string
-        NSString *authorId = [item objectForKey:@"author_id"];
-        
-        // Log the author id
-        NSLog(@"author_id = %@", authorId);
-    }
+    
 }
 - (void)didReceiveMemoryWarning
 {
