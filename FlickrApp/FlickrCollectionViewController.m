@@ -14,6 +14,9 @@
 #import "NSObject+JSON.h"
 #import "JSONKit.h"
 #import "XMLReader.h"
+#import "SBJson.h"
+#import "JSON/JSON.h"
+
 
 
 
@@ -45,13 +48,9 @@
     FlickrWebRequest *webRequest = [FlickrWebRequest sharedInstance];
     
     NSString *fetchedString = [webRequest fetchPhoto];
-    
-    NSError *parseError = nil;
-    //NSDictionary *xmlDictionary = [XMLReader dictionaryForXMLString:fetchedString error:&parseError];
-    dictionary = [XMLReader dictionaryForXMLString:fetchedString error:&parseError];
-    // Print the dictionary
-    NSLog(@"%@", dictionary);
-   
+
+    dictionary = [fetchedString JSONValue];
+     NSLog(@"%@", dictionary);
 }
 
 
@@ -95,8 +94,7 @@
     
     if (kind == UICollectionElementKindSectionHeader) {
         FlickrHeaderView *headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"HeaderView" forIndexPath:indexPath];
-        // NSString *title = [[NSString alloc]initWithFormat:@"Recipe Group #%i", indexPath.section + 1];
-        NSString *title = @"RSS Feed";
+
         headerView.title.text = [dictionary objectForKey:@"title"];        // UIImage *headerImage = [UIImage imageNamed:@"header_banner.png"];
         //headerView.backgroundImage.image = headerImage;
         

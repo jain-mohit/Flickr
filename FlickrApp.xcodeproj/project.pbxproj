@@ -26,7 +26,12 @@
 		373126F3176D640E00BA5D17 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 373126F2176D640E00BA5D17 /* SystemConfiguration.framework */; };
 		373126F7176D647900BA5D17 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 373126F6176D647900BA5D17 /* libz.dylib */; };
 		373126FB176D65B800BA5D17 /* NSObject+JSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 373126FA176D65B800BA5D17 /* NSObject+JSON.m */; };
-		37312700176EA00900BA5D17 /* XMLReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 373126FF176EA00900BA5D17 /* XMLReader.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		37312A87176EB93800BA5D17 /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 37312A7C176EB93800BA5D17 /* NSObject+SBJSON.m */; };
+		37312A88176EB93800BA5D17 /* NSString+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 37312A7E176EB93800BA5D17 /* NSString+SBJSON.m */; };
+		37312A89176EB93800BA5D17 /* SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 37312A80176EB93800BA5D17 /* SBJSON.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		37312A8A176EB93800BA5D17 /* SBJsonBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 37312A82176EB93800BA5D17 /* SBJsonBase.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		37312A8B176EB93800BA5D17 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 37312A84176EB93800BA5D17 /* SBJsonParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		37312A8C176EB93800BA5D17 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 37312A86176EB93800BA5D17 /* SBJsonWriter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		37716F34176C428A001DC686 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37716F33176C428A001DC686 /* UIKit.framework */; };
 		37716F36176C428A001DC686 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37716F35176C428A001DC686 /* Foundation.framework */; };
 		37716F38176C428A001DC686 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37716F37176C428A001DC686 /* CoreGraphics.framework */; };
@@ -103,8 +108,19 @@
 		373126F6176D647900BA5D17 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		373126F9176D65B800BA5D17 /* NSObject+JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+JSON.h"; sourceTree = "<group>"; };
 		373126FA176D65B800BA5D17 /* NSObject+JSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+JSON.m"; sourceTree = "<group>"; };
-		373126FE176EA00900BA5D17 /* XMLReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLReader.h; sourceTree = "<group>"; };
-		373126FF176EA00900BA5D17 /* XMLReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLReader.m; sourceTree = "<group>"; };
+		37312A7A176EB93800BA5D17 /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
+		37312A7B176EB93800BA5D17 /* NSObject+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJSON.h"; sourceTree = "<group>"; };
+		37312A7C176EB93800BA5D17 /* NSObject+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SBJSON.m"; sourceTree = "<group>"; };
+		37312A7D176EB93800BA5D17 /* NSString+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SBJSON.h"; sourceTree = "<group>"; };
+		37312A7E176EB93800BA5D17 /* NSString+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SBJSON.m"; sourceTree = "<group>"; };
+		37312A7F176EB93800BA5D17 /* SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJSON.h; sourceTree = "<group>"; };
+		37312A80176EB93800BA5D17 /* SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJSON.m; sourceTree = "<group>"; };
+		37312A81176EB93800BA5D17 /* SBJsonBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonBase.h; sourceTree = "<group>"; };
+		37312A82176EB93800BA5D17 /* SBJsonBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonBase.m; sourceTree = "<group>"; };
+		37312A83176EB93800BA5D17 /* SBJsonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonParser.h; sourceTree = "<group>"; };
+		37312A84176EB93800BA5D17 /* SBJsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonParser.m; sourceTree = "<group>"; };
+		37312A85176EB93800BA5D17 /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
+		37312A86176EB93800BA5D17 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
 		37716F30176C428A001DC686 /* FlickrApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlickrApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37716F33176C428A001DC686 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		37716F35176C428A001DC686 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -227,20 +243,31 @@
 			path = FlickrApp/Categories;
 			sourceTree = "<group>";
 		};
-		373126FD176EA00900BA5D17 /* XMLReader */ = {
+		37312A79176EB93800BA5D17 /* JSON */ = {
 			isa = PBXGroup;
 			children = (
-				373126FE176EA00900BA5D17 /* XMLReader.h */,
-				373126FF176EA00900BA5D17 /* XMLReader.m */,
+				37312A7A176EB93800BA5D17 /* JSON.h */,
+				37312A7B176EB93800BA5D17 /* NSObject+SBJSON.h */,
+				37312A7C176EB93800BA5D17 /* NSObject+SBJSON.m */,
+				37312A7D176EB93800BA5D17 /* NSString+SBJSON.h */,
+				37312A7E176EB93800BA5D17 /* NSString+SBJSON.m */,
+				37312A7F176EB93800BA5D17 /* SBJSON.h */,
+				37312A80176EB93800BA5D17 /* SBJSON.m */,
+				37312A81176EB93800BA5D17 /* SBJsonBase.h */,
+				37312A82176EB93800BA5D17 /* SBJsonBase.m */,
+				37312A83176EB93800BA5D17 /* SBJsonParser.h */,
+				37312A84176EB93800BA5D17 /* SBJsonParser.m */,
+				37312A85176EB93800BA5D17 /* SBJsonWriter.h */,
+				37312A86176EB93800BA5D17 /* SBJsonWriter.m */,
 			);
-			name = XMLReader;
-			path = FlickrApp/XMLReader;
+			name = JSON;
+			path = FlickrApp/JSON;
 			sourceTree = "<group>";
 		};
 		37716F27176C428A001DC686 = {
 			isa = PBXGroup;
 			children = (
-				373126FD176EA00900BA5D17 /* XMLReader */,
+				37312A79176EB93800BA5D17 /* JSON */,
 				373126F8176D65B800BA5D17 /* Categories */,
 				373126F6176D647900BA5D17 /* libz.dylib */,
 				373126F4176D642600BA5D17 /* libxml2.dylib */,
@@ -452,7 +479,12 @@
 				373126E9176D62B100BA5D17 /* JSONKit.m in Sources */,
 				373126EB176D62B100BA5D17 /* Reachability.m in Sources */,
 				373126FB176D65B800BA5D17 /* NSObject+JSON.m in Sources */,
-				37312700176EA00900BA5D17 /* XMLReader.m in Sources */,
+				37312A87176EB93800BA5D17 /* NSObject+SBJSON.m in Sources */,
+				37312A88176EB93800BA5D17 /* NSString+SBJSON.m in Sources */,
+				37312A89176EB93800BA5D17 /* SBJSON.m in Sources */,
+				37312A8A176EB93800BA5D17 /* SBJsonBase.m in Sources */,
+				37312A8B176EB93800BA5D17 /* SBJsonParser.m in Sources */,
+				37312A8C176EB93800BA5D17 /* SBJsonWriter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

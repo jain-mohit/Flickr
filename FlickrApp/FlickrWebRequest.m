@@ -56,8 +56,9 @@
 // fetch pics from flickr
 -(NSString*)fetchPhoto {
     
-    NSString *serverUrl = [NSString stringWithFormat:@"%@?format=xml",BASE_URL];
+//    NSString *serverUrl = [NSString stringWithFormat:@"%@?format=xml",BASE_URL];
  //   NSString *serverUrl = [NSString stringWithFormat:BASE_URL];
+    NSString *serverUrl = [NSString stringWithFormat:@"%@?format=json&nojsoncallback=1",BASE_URL];
     NSURL *url = [[NSURL alloc] initWithString:
                   [serverUrl stringByAddingPercentEscapesUsingEncoding: NSUTF8StringEncoding]];
     
@@ -76,8 +77,8 @@
     
     
    NSString *string = [request responseString];
- //   string = [string stringByReplacingOccurrencesOfString:@"jsonFlickrFeed(" withString:@""];
-   // string = [string substringToIndex:string.length - 1];
+   // string = [string stringByReplacingOccurrencesOfString:@"jsonFlickrFeed(" withString:@""];
+  //  string = [string substringToIndex:string.length - 1];
     return string;
 }
 
