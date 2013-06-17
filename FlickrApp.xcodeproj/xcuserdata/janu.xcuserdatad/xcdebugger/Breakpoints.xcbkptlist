@@ -216,11 +216,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "FlickrApp/FlickrWebRequest.m"
-         timestampString = "393052366.979794"
+         timestampString = "393126387.784685"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "80"
-         endingLineNumber = "80"
+         startingLineNumber = "81"
+         endingLineNumber = "81"
          landmarkName = "-fetchPhoto"
          landmarkType = "5">
       </FileBreakpoint>
@@ -229,11 +229,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "FlickrApp/FlickrCollectionViewController.m"
-         timestampString = "393115624.31641"
+         timestampString = "393126387.784685"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "121"
-         endingLineNumber = "121"
+         startingLineNumber = "123"
+         endingLineNumber = "123"
          landmarkName = "-fetchUsingASIHTTP"
          landmarkType = "5">
       </FileBreakpoint>
@@ -242,11 +242,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "FlickrApp/FlickrCollectionViewController.m"
-         timestampString = "393115382.079168"
+         timestampString = "393126387.784685"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "97"
-         endingLineNumber = "97"
+         startingLineNumber = "98"
+         endingLineNumber = "98"
          landmarkName = "-parseJSON"
          landmarkType = "5">
       </FileBreakpoint>
@@ -255,11 +255,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "FlickrApp/FlickrCollectionViewController.m"
-         timestampString = "393115651.458623"
+         timestampString = "393126387.784685"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "115"
-         endingLineNumber = "115"
+         startingLineNumber = "116"
+         endingLineNumber = "116"
          landmarkName = "-fetchUsingASIHTTP"
          landmarkType = "5">
       </FileBreakpoint>
@@ -326,6 +326,19 @@
          startingLineNumber = "67"
          endingLineNumber = "67"
          landmarkName = "-setup"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "FlickrApp/FlickrCollectionViewController.m"
+         timestampString = "393126060.540053"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "130"
+         endingLineNumber = "130"
+         landmarkName = "-fetchUsingASIHTTP"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

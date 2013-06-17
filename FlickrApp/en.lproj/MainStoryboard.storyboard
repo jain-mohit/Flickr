@@ -72,25 +72,17 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" id="sqJ-qm-zSh">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="473"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <connections>
                                     <outlet property="delegate" destination="f0B-78-iPU" id="8ow-Fo-KyE"/>
                                 </connections>
                             </scrollView>
-                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" id="RW3-wW-Nzr">
-                                <rect key="frame" x="0.0" y="468" width="320" height="36"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <connections>
-                                    <action selector="changePage:" destination="f0B-78-iPU" eventType="touchUpInside" id="aIN-IO-Fdi"/>
-                                </connections>
-                            </pageControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="LeD-gv-xsX"/>
                     <connections>
-                        <outlet property="pageControl" destination="RW3-wW-Nzr" id="Gec-N7-DVp"/>
                         <outlet property="scrollView" destination="sqJ-qm-zSh" id="1xz-p6-d3Z"/>
                     </connections>
                 </viewController>

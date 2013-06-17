@@ -13,6 +13,7 @@
 #import "FlickrWebRequest.h"
 #import "NSObject+JSON.h"
 #import "JSONKit.h"
+#import "XMLReader.h"
 
 
 
@@ -113,12 +114,20 @@
     FlickrWebRequest *webRequest = [FlickrWebRequest sharedInstance];
     
     NSString *fetchedString = [webRequest fetchPhoto];
-    NSError *error = nil;
+  /*  NSError *error = nil;
     NSDictionary *jsonInfo = [NSJSONSerialization JSONObjectWithData:[fetchedString dataUsingEncoding:NSUnicodeStringEncoding] options:NSJSONReadingMutableContainers error:&error];
     if (error) {
         NSLog(@"error description...%@", [error description]);
     }
-    NSLog(@"data is %@",jsonInfo);
+    NSLog(@"data is %@",jsonInfo); */
+    
+    
+    
+    NSError *parseError = nil;
+    //NSDictionary *xmlDictionary = [XMLReader dictionaryForXMLString:fetchedString error:&parseError];
+    dictionary = [XMLReader dictionaryForXMLString:fetchedString error:&parseError];
+    // Print the dictionary
+    NSLog(@"%@", dictionary);
 }
 
 /*
