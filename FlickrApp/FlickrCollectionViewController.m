@@ -20,6 +20,7 @@
     BOOL shareEnabled;
     NSMutableArray *selectedPics;
     NSMutableArray *randomPics;
+    NSMutableArray *arrayWithImages;
 }
 
 @end
@@ -51,8 +52,19 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self fetchUsingASIHTTP];
+    UIBarButtonItem *anotherButton = [[UIBarButtonItem alloc] initWithTitle:@"Refresh" style:UIBarButtonItemStylePlain target:self action:@selector(loadFromFlickr)];
+    self.navigationItem.rightBarButtonItem = anotherButton;
+    [self loadFromFlickr];
+    
+	// Do any additional setup after loading the view.
+}
+
+
+-(void)loadFromFlickr {
+   [self fetchUsingASIHTTP];
+ //   [self fetch];
     randomPics = [[NSMutableArray alloc]init];
+    arrayWithImages = [[NSMutableArray alloc]init];
     [self parseData];
     
     flickrImages = [NSArray arrayWithObjects:randomPics, nil];
@@ -61,9 +73,62 @@
     collectionViewLayout.sectionInset = UIEdgeInsetsMake(20, 0, 20, 0);
     
     selectedPics = [NSMutableArray array];
-	// Do any additional setup after loading the view.
 }
 
+-(void)fetch {
+    
+    NSString *serverUrl = [NSString stringWithFormat:@"%@?format=json&nojsoncallback=1",BASE_URL];
+    NSURL *url = [[NSURL alloc] initWithString:
+                  [serverUrl stringByAddingPercentEscapesUsingEncoding: NSUTF8StringEncoding]];
+    
+    // Create the request.
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    
+    // Create url connection and fire request
+    NSURLConnection *conn = [[NSURLConnection alloc] init];
+    (void)[conn initWithRequest:request delegate:self];
+    [conn start];
+}
+
+/*
+#pragma mark NSURLConnection Delegate Methods
+
+- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
+    // A response has been received, this is where we initialize the instance var you created
+    // so that we can append data to it in the didReceiveData method
+    // Furthermore, this method is called each time there is a redirect so reinitializing it
+    // also serves to clear it
+    responseData = [[NSMutableData alloc] init];
+}
+
+- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
+    // Append the new data to the instance variable you declared
+    [responseData appendData:data];
+}
+
+- (NSCachedURLResponse *)connection:(NSURLConnection *)connection
+                  willCacheResponse:(NSCachedURLResponse*)cachedResponse {
+    // Return nil to indicate not necessary to store a cached response for this connection
+    return nil;
+}
+
+- (void)connectionDidFinishLoading:(NSURLConnection *)connection {
+    // The request is complete and data has been received
+    // You can parse the stuff in your instance variable now
+    [self parseData];
+    //parse out the json data
+    NSError* error;
+    
+    NSString *responseString = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
+    dictionary = [responseString JSONValue];
+    NSLog(@"%@", dictionary);
+}
+
+- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
+    // The request has failed for some reason!
+    // Check the error var
+}
+*/
 
 -(void)parseData {
     // The dictionary has an entry called "items", which is an array
@@ -134,6 +199,7 @@
     
     UIImage *tmpImage = [[UIImage alloc] initWithData:data];
     recipeImageView.image = tmpImage;
+    [arrayWithImages addObject:tmpImage];
     
     cell.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"photo-frame-2.png"]];
     cell.selectedBackgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"photo-frame-selected.png"]];
@@ -149,6 +215,7 @@
         destViewController.flickrImageName = [flickrImages[indexPath.section] objectAtIndex:indexPath.row];
         destViewController.imageArray = items;
         destViewController.selectedPage = indexPath.row;
+        destViewController.arrayWithImages = arrayWithImages;
         [self.collectionView deselectItemAtIndexPath:indexPath animated:NO];
     }
     
@@ -156,18 +223,18 @@
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (shareEnabled) {
-        NSString *selectedRecipe = [flickrImages[indexPath.section] objectAtIndex:indexPath.row];
-        [selectedPics addObject:selectedRecipe];
-    }
+//    if (shareEnabled) {
+//        NSString *selectedPic = [flickrImages[indexPath.section] objectAtIndex:indexPath.row];
+//        [selectedPics addObject:selectedPic];
+//    }
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (shareEnabled) {
-        NSString *deSelectedRecipe = [flickrImages[indexPath.section] objectAtIndex:indexPath.row];
-        [selectedPics removeObject:deSelectedRecipe];
-    }
+//    if (shareEnabled) {
+//        NSString *deSelectedRecipe = [flickrImages[indexPath.section] objectAtIndex:indexPath.row];
+//        [selectedPics removeObject:deSelectedRecipe];
+//    }
 }
 
 

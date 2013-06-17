@@ -10,7 +10,7 @@
 #import "ASIHTTPRequest.h"
 #import "ASIFormDataRequest.h"
 
-#define BASE_URL @"http://api.flickr.com/services/feeds/photos_public.gne"
+
 
 @implementation FlickrWebRequest
 
@@ -54,8 +54,6 @@
 // fetch pics from flickr
 -(NSString*)fetchPhoto {
     
-//    NSString *serverUrl = [NSString stringWithFormat:@"%@?format=xml",BASE_URL];
- //   NSString *serverUrl = [NSString stringWithFormat:BASE_URL];
     NSString *serverUrl = [NSString stringWithFormat:@"%@?format=json&nojsoncallback=1",BASE_URL];
     NSURL *url = [[NSURL alloc] initWithString:
                   [serverUrl stringByAddingPercentEscapesUsingEncoding: NSUTF8StringEncoding]];
@@ -73,10 +71,7 @@
         NSLog(@"response string is %@",[request responseString]);
     }
     
-    
-   NSString *string = [request responseString];
-   // string = [string stringByReplacingOccurrencesOfString:@"jsonFlickrFeed(" withString:@""];
-  //  string = [string substringToIndex:string.length - 1];
+    NSString *string = [request responseString];
     return string;
 }
 
@@ -84,7 +79,6 @@
 //Check server connectivity
 -(BOOL)verifyWebserviceConnection {
     NSString *serverUrl = [NSString stringWithFormat:@"www.flickr.com"];
-    //  NSLog(@"url is %@",serverUrl);
     NSURL *url = [[NSURL alloc] initWithString:
                   [serverUrl stringByAddingPercentEscapesUsingEncoding: NSUTF8StringEncoding]];
     if([[self serviceAvailable:[self sendRequest:url]] isEqualToString:@"OK"]) {

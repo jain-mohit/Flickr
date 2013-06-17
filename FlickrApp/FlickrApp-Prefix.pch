@@ -11,4 +11,5 @@
 #ifdef __OBJC__
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
+#define BASE_URL @"http://api.flickr.com/services/feeds/photos_public.gne"
 #endif

@@ -10,9 +10,6 @@
 #import "FlickrImageViewController.h"
 
 
-static NSString *kNameKey = @"nameKey";
-static NSString *kImageKey = @"imageKey";
-
 @interface FlickrImagePageController ()
 
 @end
@@ -29,21 +26,11 @@ static NSString *kImageKey = @"imageKey";
 }
 
 
-//-(void)scrollToselectedPage {
-//
-//}
-
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     [self setup];
-    
-	//self.recipeImageView.image = [UIImage imageNamed:self.flickrImageName];
 }
-
-//Get SelectedPageRect
-//Scroll to That page
 
 
 -(void)setup {
@@ -155,6 +142,7 @@ static NSString *kImageKey = @"imageKey";
     {
         controller = [[FlickrImageViewController alloc] initWithPageNumber:page];
         controller.images = self.imageArray;
+        controller.arrayWithImages = self.arrayWithImages;
         [self.viewControllers replaceObjectAtIndex:page withObject:controller];
     }
     

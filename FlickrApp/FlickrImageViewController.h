@@ -15,6 +15,7 @@
 @property (nonatomic, strong) IBOutlet UILabel *author;
 @property (nonatomic, strong) IBOutlet UIImageView *numberImage;
 @property (nonatomic, strong) NSArray *images;
+@property (nonatomic, strong) NSMutableArray *arrayWithImages;
 
 //- (id)initWithPageNumber:(NSUInteger)page image:(UIImage *)img;
 - (id)initWithPageNumber:(NSUInteger)page;
