@@ -8,7 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+@interface FlickrCollectionViewController : UICollectionViewController<NSURLConnectionDelegate> {
+    NSMutableData *responseData;
+}
 
-@interface FlickrCollectionViewController : UICollectionViewController
 
+@property(nonatomic, strong) NSDictionary *dictionary;
+@property (strong, nonatomic) UIAlertView *loadingAlertView;
+@property(nonatomic, strong) NSMutableArray *flickrArray;
 @end

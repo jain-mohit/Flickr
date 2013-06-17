@@ -10,7 +10,11 @@
 #import "ASIHTTPRequest.h"
 
 
-@interface FlickrWebRequest : NSObject
+@interface FlickrWebRequest : NSObject {
+    
+
+    
+}
 
 + (FlickrWebRequest*) sharedInstance;
 -(NSString *)serviceAvailable: (ASIHTTPRequest *)request;

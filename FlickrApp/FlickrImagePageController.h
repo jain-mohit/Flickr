@@ -20,7 +20,7 @@
 @property (nonatomic, strong) NSMutableArray *viewControllers;
 @property (nonatomic, strong) IBOutlet UIPageControl *pageControl;
 @property(nonatomic, weak)IBOutlet UIScrollView *scrollView;
-@property(nonatomic, strong)NSNumber *selectedPage;
+@property(nonatomic, assign) NSInteger selectedPage;
 
 
 @end

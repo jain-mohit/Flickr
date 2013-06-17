@@ -36,7 +36,6 @@
     NSError *error = [request error];
     if (error || [request responseStatusCode] != 200) {
         // This will happen probably when server is offline or not reachable
-        //NSString *message = [NSString stringWithFormat: @"Service not Available: %@ %@",[error localizedDescription],[request responseString]];
         NSString *message = [NSString stringWithFormat: @"Service not Available: %@ %@",[error localizedDescription],@"Error connecting to server"];
         return message;
     } else {
@@ -74,12 +73,15 @@
         NSLog(@"response string is %@",[request responseString]);
     }
     
-    //    return [self serviceAvailable:[self sendRequest:url]];
-    return [request responseString];
+    
+   NSString *string = [request responseString];
+    string = [string stringByReplacingOccurrencesOfString:@"jsonFlickrFeed(" withString:@""];
+    string = [string substringToIndex:string.length - 1];
+    return string;
 }
 
 
-//check server connectivity
+//Check server connectivity
 -(BOOL)verifyWebserviceConnection {
     NSString *serverUrl = [NSString stringWithFormat:@"www.flickr.com"];
     //  NSLog(@"url is %@",serverUrl);

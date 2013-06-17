@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="PAu-7K-nta">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="PAu-7K-nta">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -25,19 +25,12 @@
                                     <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" tag="100" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rc6-0d-LDt">
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="90" id="WsY-Ed-5Dl"/>
-                                                <constraint firstAttribute="height" constant="90" id="Wsf-vl-pkP"/>
-                                            </constraints>
+                                        <imageView userInteractionEnabled="NO" tag="100" contentMode="scaleToFill" id="rc6-0d-LDt">
+                                            <rect key="frame" x="5" y="5" width="90" height="90"/>
                                         </imageView>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
-                                <constraints>
-                                    <constraint firstItem="rc6-0d-LDt" firstAttribute="centerX" secondItem="9Ng-83-eZP" secondAttribute="centerX" type="default" id="0Y7-aX-VNl"/>
-                                    <constraint firstItem="rc6-0d-LDt" firstAttribute="centerY" secondItem="9Ng-83-eZP" secondAttribute="centerY" type="default" id="7IS-9C-33t"/>
-                                </constraints>
                                 <connections>
                                     <outlet property="recipeImageView" destination="rc6-0d-LDt" id="DaS-yp-OIj"/>
                                     <segue destination="f0B-78-iPU" kind="push" identifier="showSelectedPhoto" id="xSH-OB-NzC"/>
@@ -48,20 +41,13 @@
                             <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             <subviews>
-                                <label opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="left" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Db-a4-8Cz">
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="548" id="8GB-qZ-lVX"/>
-                                    </constraints>
+                                <label opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="left" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9Db-a4-8Cz">
+                                    <rect key="frame" x="0.0" y="-249" width="320" height="548"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                             </subviews>
-                            <constraints>
-                                <constraint firstItem="9Db-a4-8Cz" firstAttribute="trailing" secondItem="YmT-EV-TKv" secondAttribute="trailing" type="default" id="KB4-U7-Qc0"/>
-                                <constraint firstItem="9Db-a4-8Cz" firstAttribute="leading" secondItem="YmT-EV-TKv" secondAttribute="leading" type="default" id="dwW-9K-xei"/>
-                                <constraint firstItem="9Db-a4-8Cz" firstAttribute="centerY" secondItem="YmT-EV-TKv" secondAttribute="centerY" type="default" id="vLt-LC-siV"/>
-                            </constraints>
                             <connections>
                                 <outlet property="title" destination="9Db-a4-8Cz" id="bje-sg-doW"/>
                             </connections>
@@ -85,12 +71,15 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sqJ-qm-zSh">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" id="sqJ-qm-zSh">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="473"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <connections>
                                     <outlet property="delegate" destination="f0B-78-iPU" id="8ow-Fo-KyE"/>
                                 </connections>
                             </scrollView>
-                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="RW3-wW-Nzr">
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" id="RW3-wW-Nzr">
+                                <rect key="frame" x="0.0" y="468" width="320" height="36"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="changePage:" destination="f0B-78-iPU" eventType="touchUpInside" id="aIN-IO-Fdi"/>
@@ -98,15 +87,6 @@
                             </pageControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="RW3-wW-Nzr" firstAttribute="trailing" secondItem="9kW-Sg-3kd" secondAttribute="trailing" type="default" id="1n0-5W-vd1"/>
-                            <constraint firstAttribute="bottom" secondItem="sqJ-qm-zSh" secondAttribute="bottom" constant="31" id="20y-j1-Fh4"/>
-                            <constraint firstItem="RW3-wW-Nzr" firstAttribute="leading" secondItem="9kW-Sg-3kd" secondAttribute="leading" type="default" id="7aB-af-pya"/>
-                            <constraint firstItem="RW3-wW-Nzr" firstAttribute="bottom" secondItem="9kW-Sg-3kd" secondAttribute="bottom" type="default" id="c20-xa-MSs"/>
-                            <constraint firstItem="sqJ-qm-zSh" firstAttribute="leading" secondItem="9kW-Sg-3kd" secondAttribute="leading" type="default" id="e6K-fE-L7R"/>
-                            <constraint firstItem="sqJ-qm-zSh" firstAttribute="trailing" secondItem="9kW-Sg-3kd" secondAttribute="trailing" type="default" id="mX0-1k-pcy"/>
-                            <constraint firstItem="sqJ-qm-zSh" firstAttribute="top" secondItem="9kW-Sg-3kd" secondAttribute="top" type="default" id="uwc-IX-Irb"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="LeD-gv-xsX"/>
                     <connections>
@@ -158,9 +138,6 @@
             <relationships>
                 <relationship kind="outlet" name="recipeImageView" candidateClass="UIImageView"/>
             </relationships>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
         </class>
         <class className="UICollectionReusableView" superclassName="UIView">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionReusableView.h"/>

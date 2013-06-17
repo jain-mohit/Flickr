@@ -4,41 +4,15 @@
    version = "1.0">
    <FileBreakpoints>
       <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "FlickrApp/FlickrCollectionViewController.m"
-         timestampString = "393047664.473884"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "113"
-         endingLineNumber = "113"
-         landmarkName = "-prepareForSegue:sender:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "FlickrApp/FlickrCollectionViewController.m"
-         timestampString = "393047664.473884"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "50"
-         endingLineNumber = "50"
-         landmarkName = "-viewDidLoad"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
+         shouldBeEnabled = "Yes"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "FlickrApp/FlickrImagePageController.m"
-         timestampString = "393043518.433456"
+         timestampString = "393124439.862592"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "138"
-         endingLineNumber = "138"
+         startingLineNumber = "160"
+         endingLineNumber = "160"
          landmarkName = "-loadScrollViewWithPage:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -73,37 +47,24 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "FlickrApp/FlickrImagePageController.m"
-         timestampString = "393043518.433456"
+         timestampString = "393124439.862592"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "176"
-         endingLineNumber = "176"
+         startingLineNumber = "209"
+         endingLineNumber = "209"
          landmarkName = "-scrollViewDidScroll:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
-         shouldBeEnabled = "No"
+         shouldBeEnabled = "Yes"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "FlickrApp/FlickrImagePageController.m"
-         timestampString = "393043518.433456"
+         timestampString = "393124439.862592"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "164"
-         endingLineNumber = "164"
-         landmarkName = "-scrollViewDidEndDecelerating:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "FlickrApp/FlickrImagePageController.m"
-         timestampString = "393043518.433456"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "127"
-         endingLineNumber = "127"
+         startingLineNumber = "151"
+         endingLineNumber = "151"
          landmarkName = "-loadScrollViewWithPage:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -112,11 +73,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "FlickrApp/FlickrImagePageController.m"
-         timestampString = "393043518.433456"
+         timestampString = "393124439.862592"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "95"
-         endingLineNumber = "95"
+         startingLineNumber = "119"
+         endingLineNumber = "119"
          landmarkName = "-didRotateFromInterfaceOrientation:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -125,24 +86,24 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "FlickrApp/FlickrImagePageController.m"
-         timestampString = "393043518.433456"
+         timestampString = "393124439.862592"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "187"
-         endingLineNumber = "187"
+         startingLineNumber = "221"
+         endingLineNumber = "221"
          landmarkName = "-gotoPage:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
-         shouldBeEnabled = "No"
+         shouldBeEnabled = "Yes"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "FlickrApp/FlickrImagePageController.m"
-         timestampString = "393043518.433456"
+         timestampString = "393124439.862592"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "200"
-         endingLineNumber = "200"
+         startingLineNumber = "234"
+         endingLineNumber = "234"
          landmarkName = "-changePage:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -151,11 +112,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "FlickrApp/FlickrImagePageController.m"
-         timestampString = "393043518.433456"
+         timestampString = "393124439.862592"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "99"
-         endingLineNumber = "99"
+         startingLineNumber = "123"
+         endingLineNumber = "123"
          landmarkName = "-loadAlbum"
          landmarkType = "5">
       </FileBreakpoint>
@@ -164,11 +125,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "FlickrApp/FlickrImagePageController.m"
-         timestampString = "393043518.433456"
+         timestampString = "393124439.862592"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "89"
-         endingLineNumber = "89"
+         startingLineNumber = "113"
+         endingLineNumber = "113"
          landmarkName = "-shouldAutorotateToInterfaceOrientation:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -177,12 +138,25 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "FlickrApp/FlickrImagePageController.m"
-         timestampString = "393043518.433456"
+         timestampString = "393124439.862592"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "73"
-         endingLineNumber = "73"
+         startingLineNumber = "97"
+         endingLineNumber = "97"
          landmarkName = "-loadRequiredPages:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "FlickrApp/FlickrImagePageController.m"
+         timestampString = "393120443.917349"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "39"
+         endingLineNumber = "39"
+         landmarkName = "-viewDidLoad"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -190,12 +164,64 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "FlickrApp/FlickrImagePageController.m"
-         timestampString = "393033849.137684"
+         timestampString = "393124439.862592"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "33"
-         endingLineNumber = "33"
-         landmarkName = "-viewDidLoad"
+         startingLineNumber = "130"
+         endingLineNumber = "130"
+         landmarkName = "-loadAlbum"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "FlickrApp/FlickrImagePageController.m"
+         timestampString = "393124439.862592"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "179"
+         endingLineNumber = "179"
+         landmarkName = "-loadScrollViewWithPage:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "FlickrApp/FlickrImagePageController.m"
+         timestampString = "393124439.862592"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "156"
+         endingLineNumber = "156"
+         landmarkName = "-loadScrollViewWithPage:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "FlickrApp/FlickrImagePageController.m"
+         timestampString = "393124439.862592"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "142"
+         endingLineNumber = "142"
+         landmarkName = "-loadAlbum"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "FlickrApp/FlickrWebRequest.m"
+         timestampString = "393052366.979794"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "80"
+         endingLineNumber = "80"
+         landmarkName = "-fetchPhoto"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -203,12 +229,51 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "FlickrApp/FlickrCollectionViewController.m"
-         timestampString = "393047664.473884"
+         timestampString = "393115624.31641"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "45"
-         endingLineNumber = "45"
-         landmarkName = "-viewDidLoad"
+         startingLineNumber = "121"
+         endingLineNumber = "121"
+         landmarkName = "-fetchUsingASIHTTP"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "FlickrApp/FlickrCollectionViewController.m"
+         timestampString = "393115382.079168"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "97"
+         endingLineNumber = "97"
+         landmarkName = "-parseJSON"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "FlickrApp/FlickrCollectionViewController.m"
+         timestampString = "393115651.458623"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "115"
+         endingLineNumber = "115"
+         landmarkName = "-fetchUsingASIHTTP"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "FlickrApp/FlickrImagePageController.m"
+         timestampString = "393120881.592571"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "51"
+         endingLineNumber = "51"
+         landmarkName = "-setup"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -216,51 +281,51 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "FlickrApp/FlickrImagePageController.m"
-         timestampString = "393043518.433456"
+         timestampString = "393120881.592571"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "106"
-         endingLineNumber = "106"
-         landmarkName = "-loadAlbum"
+         startingLineNumber = "63"
+         endingLineNumber = "63"
+         landmarkName = "-setup"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
-         shouldBeEnabled = "No"
+         shouldBeEnabled = "Yes"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "FlickrApp/FlickrImagePageController.m"
-         timestampString = "393043518.433456"
+         timestampString = "393124439.862592"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "157"
-         endingLineNumber = "157"
+         startingLineNumber = "166"
+         endingLineNumber = "166"
          landmarkName = "-loadScrollViewWithPage:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
-         shouldBeEnabled = "No"
+         shouldBeEnabled = "Yes"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "FlickrApp/FlickrImagePageController.m"
-         timestampString = "393043518.433456"
+         timestampString = "393124439.862592"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "133"
-         endingLineNumber = "133"
-         landmarkName = "-loadScrollViewWithPage:"
+         startingLineNumber = "211"
+         endingLineNumber = "211"
+         landmarkName = "-scrollViewDidScroll:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
-         shouldBeEnabled = "No"
+         shouldBeEnabled = "Yes"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "FlickrApp/FlickrImagePageController.m"
-         timestampString = "393043518.433456"
+         timestampString = "393122607.795396"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "118"
-         endingLineNumber = "118"
-         landmarkName = "-loadAlbum"
+         startingLineNumber = "67"
+         endingLineNumber = "67"
+         landmarkName = "-setup"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>
