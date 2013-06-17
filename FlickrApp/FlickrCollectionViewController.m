@@ -44,7 +44,7 @@
     NSString *fetchedString = [webRequest fetchPhoto];
 
     dictionary = [fetchedString JSONValue];
-     NSLog(@"%@", dictionary);
+  //   NSLog(@"%@", dictionary);
 }
 
 
@@ -144,7 +144,16 @@
     for(int i =0; i<items.count;i++) {
         NSDictionary *media = [[items objectAtIndex:i] objectForKey:@"media"];
         NSString *pic = [media objectForKey:@"m"];
-        [randomPics addObject:pic];
+       // [randomPics addObject:pic];
+        
+        NSURL *url = [NSURL URLWithString:pic];
+        
+        NSData *data = [[NSData alloc] initWithContentsOfURL:url];
+        
+        UIImage *tmpImage = [[UIImage alloc] initWithData:data];
+        
+        [randomPics addObject:tmpImage];
+        
         
     }
     
@@ -200,15 +209,16 @@
     
     FlickrViewCell *cell = (FlickrViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
     
-    UIImageView *recipeImageView = (UIImageView *)[cell viewWithTag:100];
-    NSURL *url = [NSURL URLWithString:[flickrImages[indexPath.section] objectAtIndex:indexPath.row]];
+    UIImageView *photoImageView = (UIImageView *)[cell viewWithTag:100];
+ /*   NSURL *url = [NSURL URLWithString:[flickrImages[indexPath.section] objectAtIndex:indexPath.row]];
     
     NSData *data = [[NSData alloc] initWithContentsOfURL:url];
     
     UIImage *tmpImage = [[UIImage alloc] initWithData:data];
-    recipeImageView.image = tmpImage;
+    photoImageView.image = tmpImage;
     [arrayWithImages addObject:tmpImage];
-    
+   */
+    photoImageView.image = [randomPics objectAtIndex:indexPath.row];
     cell.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"photo-frame-2.png"]];
     cell.selectedBackgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"photo-frame-selected.png"]];
     
@@ -223,7 +233,7 @@
         destViewController.flickrImageName = [flickrImages[indexPath.section] objectAtIndex:indexPath.row];
         destViewController.imageArray = items;
         destViewController.selectedPage = indexPath.row;
-        destViewController.arrayWithImages = arrayWithImages;
+        destViewController.arrayWithImages = randomPics;
         [self.collectionView deselectItemAtIndexPath:indexPath animated:NO];
     }
     
