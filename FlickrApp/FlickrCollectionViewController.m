@@ -30,7 +30,7 @@
 @end
 
 @implementation FlickrCollectionViewController
-@synthesize dictionary, loadingAlertView, flickrArray;
+@synthesize dictionary, loadingAlertView, flickrArray,items;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -74,7 +74,7 @@
 
 -(void)parseData {
     // The dictionary has an entry called "items", which is an array
-    NSArray *items = [dictionary objectForKey:@"items"];
+    items = [dictionary objectForKey:@"items"];
     for(int i =0; i<items.count;i++) {
         NSDictionary *media = [[items objectAtIndex:i] objectForKey:@"media"];
         NSString *pic = [media objectForKey:@"m"];
@@ -161,7 +161,7 @@
         FlickrImagePageController *destViewController = segue.destinationViewController;
         NSIndexPath *indexPath = [indexPaths objectAtIndex:0];
         destViewController.flickrImageName = [flickrImages[indexPath.section] objectAtIndex:indexPath.row];
-        destViewController.imageArray = randomPics;
+        destViewController.imageArray = items;
         destViewController.selectedPage = indexPath.row;
         [self.collectionView deselectItemAtIndexPath:indexPath animated:NO];
     }

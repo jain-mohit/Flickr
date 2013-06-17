@@ -30,7 +30,7 @@ static NSString *kImageKey = @"imageKey";
 
 
 //-(void)scrollToselectedPage {
-//  
+//
 //}
 
 
@@ -47,7 +47,7 @@ static NSString *kImageKey = @"imageKey";
 
 
 -(void)setup {
-     
+    
     NSUInteger numberPages = self.imageArray.count;
     
     // view controllers are created lazily
@@ -65,30 +65,28 @@ static NSString *kImageKey = @"imageKey";
     CGSizeMake(CGRectGetWidth(self.view.frame) * numberPages, CGRectGetHeight(self.view.frame));
     self.scrollView.scrollsToTop = YES;
     self.scrollView.delegate = self;
-
-//       int selectedPage = [self.selectedPage integerValue];
+    
+    //       int selectedPage = [self.selectedPage integerValue];
     // pages are created on demand
     // load the visible page
     // load the page on either side to avoid flashes when the user starts scrolling
     
- 
-  //  [self loadAlbum];
-   CGRect visibleRect = CGRectMake(320*self.selectedPage, 0, 320, 504);
+    
+    //  [self loadAlbum];
+    CGRect visibleRect = CGRectMake(320*self.selectedPage, 0, 320, 504);
     [self.scrollView scrollRectToVisible:visibleRect animated:NO];
-    [self loadScrollViewWithPage:self.selectedPage];
-    if(self.selectedPage>0 && self.selectedPage<numberPages) {
     
-    [self loadScrollViewWithPage:self.selectedPage - 1];
-    [self loadScrollViewWithPage:self.selectedPage + 1];
+    int selectedPage = self.selectedPage;
+    if (selectedPage > 0)
+    {
+        [self loadScrollViewWithPage:selectedPage-1];
     }
+    if (selectedPage < self.imageArray.count)
+    {
+        [self loadScrollViewWithPage:selectedPage+1];
+    }
+    [self loadScrollViewWithPage:selectedPage];
     
-else if(self.selectedPage==0) {
-    [self loadScrollViewWithPage:self.selectedPage + 1];
-}
-else if(self.selectedPage==numberPages) {
-     [self loadScrollViewWithPage:self.selectedPage - 1];
-}
-
 }
 
 - (void) loadRequiredPages:(int) selectedPage
@@ -141,7 +139,7 @@ else if(self.selectedPage==numberPages) {
     }
     self.viewControllers = controllers;
     
-//    [self loadRequiredPages:self.pageControl.currentPage];
+    //    [self loadRequiredPages:self.pageControl.currentPage];
     [self loadRequiredPages:self.selectedPage];
     [self gotoPage:NO]; // remain at the same page (don't animate)
 }
@@ -173,8 +171,8 @@ else if(self.selectedPage==numberPages) {
         [controller didMoveToParentViewController:self];
         
         NSDictionary *numberItem = [self.imageArray objectAtIndex:page];
-   //     controller.numberImage.image = [UIImage imageNamed:[numberItem valueForKey:kImageKey]];
-   //     controller.numberTitle.text = [numberItem valueForKey:kNameKey];
+        //     controller.numberImage.image = [UIImage imageNamed:[numberItem valueForKey:kImageKey]];
+        //     controller.numberTitle.text = [numberItem valueForKey:kNameKey];
     }
 }
 
@@ -191,15 +189,15 @@ else if(self.selectedPage==numberPages) {
     [self loadScrollViewWithPage:page - 1];
     [self loadScrollViewWithPage:page];
     [self loadScrollViewWithPage:page + 1];
-
-//    // switch the indicator when more than 50% of the previous/next page is visible
-//    CGFloat pageWidth = CGRectGetWidth(self.scrollView.frame);
-//    
-//    NSInteger page = floor((self.scrollView.contentOffset.x - pageWidth / 2) / pageWidth) + 1;
-////    self.pageControl.currentPage = page;
-//self.selectedPage = [NSNumber numberWithInteger:page];
-//    // load the visible page and the page on either side of it (to avoid flashes when the user starts scrolling)
-//    [self loadRequiredPages:page];
+    
+    //    // switch the indicator when more than 50% of the previous/next page is visible
+    //    CGFloat pageWidth = CGRectGetWidth(self.scrollView.frame);
+    //
+    //    NSInteger page = floor((self.scrollView.contentOffset.x - pageWidth / 2) / pageWidth) + 1;
+    ////    self.pageControl.currentPage = page;
+    //self.selectedPage = [NSNumber numberWithInteger:page];
+    //    // load the visible page and the page on either side of it (to avoid flashes when the user starts scrolling)
+    //    [self loadRequiredPages:page];
     
     // a possible optimization would be to unload the views+controllers which are no longer visible
 }
@@ -210,14 +208,14 @@ else if(self.selectedPage==numberPages) {
     CGFloat pageWidth = self.scrollView.frame.size.width;
     int page = floor((self.scrollView.contentOffset.x - pageWidth / 2) / pageWidth) + 1;
     NSLog(@"page...%d", page);
-//    [self loadScrollViewWithPage:page];
+    //    [self loadScrollViewWithPage:page];
 	
 }
 
 - (void)gotoPage:(BOOL)animated
 {
-//    NSInteger page = self.pageControl.currentPage;
-//    NSInteger page = [self.selectedPage integerValue];
+    //    NSInteger page = self.pageControl.currentPage;
+    //    NSInteger page = [self.selectedPage integerValue];
     
     // load the visible page and the page on either side of it (to avoid flashes when the user starts scrolling)
     [self loadRequiredPages:self.selectedPage];
@@ -231,8 +229,8 @@ else if(self.selectedPage==numberPages) {
 
 - (IBAction)changePage:(id)sender
 {
-   
-    [self gotoPage:YES];    // YES = animate
+    
+    [self gotoPage:YES];
 }
 
 

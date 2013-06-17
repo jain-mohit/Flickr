@@ -37,9 +37,19 @@
 {
   //  self.pageNumberLabel.text = [NSString stringWithFormat:@"Page %d", pageNumber + 1];
   //  self.numberImage.image = [UIImage imageNamed:[self.images objectAtIndex:pageNumber]];
+    NSLog(@"page number %d",pageNumber);
+    self.photoTitle.text = [[self.images objectAtIndex:pageNumber] objectForKey:@"title"];
+    NSString *authorName = [[self.images objectAtIndex:pageNumber] objectForKey:@"author"];
+    authorName = [authorName stringByReplacingOccurrencesOfString:@"nobody@flickr.com (" withString:@""];
+     authorName = [authorName stringByReplacingOccurrencesOfString:@")" withString:@""];
     
-    self.photoTitle.text = @"";
-    self.author.text = @"";
+    self.author.text = [NSString stringWithFormat:@"Author %@",authorName];
+    NSURL *url = [NSURL URLWithString:[[[self.images objectAtIndex:pageNumber] objectForKey:@"media"] objectForKey:@"m"]];
+                  
+    NSData *data = [[NSData alloc] initWithContentsOfURL:url];
+    
+    UIImage *tmpImage = [[UIImage alloc] initWithData:data];
+    self.numberImage.image = tmpImage;
 }
 
 - (void)didReceiveMemoryWarning
