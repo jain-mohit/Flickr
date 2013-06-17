@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="PAu-7K-nta">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="PAu-7K-nta">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -25,12 +25,19 @@
                                     <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" tag="100" contentMode="scaleToFill" id="rc6-0d-LDt">
-                                            <rect key="frame" x="5" y="5" width="90" height="90"/>
+                                        <imageView userInteractionEnabled="NO" tag="100" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rc6-0d-LDt">
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="90" id="K6W-qF-ZWB"/>
+                                                <constraint firstAttribute="width" constant="90" id="ktR-RM-SSL"/>
+                                            </constraints>
                                         </imageView>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
+                                <constraints>
+                                    <constraint firstItem="rc6-0d-LDt" firstAttribute="centerX" secondItem="9Ng-83-eZP" secondAttribute="centerX" type="default" id="48G-mw-Oag"/>
+                                    <constraint firstItem="rc6-0d-LDt" firstAttribute="centerY" secondItem="9Ng-83-eZP" secondAttribute="centerY" type="default" id="H8V-aJ-lZg"/>
+                                </constraints>
                                 <connections>
                                     <outlet property="recipeImageView" destination="rc6-0d-LDt" id="DaS-yp-OIj"/>
                                     <segue destination="f0B-78-iPU" kind="push" identifier="showSelectedPhoto" id="xSH-OB-NzC"/>
@@ -41,20 +48,29 @@
                             <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             <subviews>
-                                <label opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="left" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9Db-a4-8Cz">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="30"/>
+                                <label opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="left" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Db-a4-8Cz">
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3xp-e3-rjM">
-                                    <rect key="frame" x="0.0" y="30" width="320" height="20"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3xp-e3-rjM">
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="20" id="6Rm-TQ-rx3"/>
+                                    </constraints>
                                     <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="10"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                             </subviews>
+                            <constraints>
+                                <constraint firstItem="3xp-e3-rjM" firstAttribute="trailing" secondItem="YmT-EV-TKv" secondAttribute="trailing" type="default" id="CYp-HK-DpO"/>
+                                <constraint firstItem="9Db-a4-8Cz" firstAttribute="leading" secondItem="YmT-EV-TKv" secondAttribute="leading" type="default" id="GkH-ia-Za0"/>
+                                <constraint firstItem="3xp-e3-rjM" firstAttribute="bottom" secondItem="YmT-EV-TKv" secondAttribute="bottom" type="default" id="MTa-c2-HxJ"/>
+                                <constraint firstAttribute="bottom" secondItem="9Db-a4-8Cz" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="Obv-Um-e76"/>
+                                <constraint firstItem="3xp-e3-rjM" firstAttribute="leading" secondItem="YmT-EV-TKv" secondAttribute="leading" type="default" id="TZr-bx-3hN"/>
+                                <constraint firstItem="9Db-a4-8Cz" firstAttribute="top" secondItem="YmT-EV-TKv" secondAttribute="top" type="default" id="WJY-tW-W8P"/>
+                                <constraint firstItem="9Db-a4-8Cz" firstAttribute="trailing" secondItem="YmT-EV-TKv" secondAttribute="trailing" type="default" id="yhk-bo-6IP"/>
+                            </constraints>
                             <connections>
                                 <outlet property="time" destination="3xp-e3-rjM" id="dl5-mU-iR4"/>
                                 <outlet property="title" destination="9Db-a4-8Cz" id="bje-sg-doW"/>
@@ -79,15 +95,19 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" id="sqJ-qm-zSh">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sqJ-qm-zSh">
                                 <connections>
                                     <outlet property="delegate" destination="f0B-78-iPU" id="8ow-Fo-KyE"/>
                                 </connections>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="sqJ-qm-zSh" firstAttribute="bottom" secondItem="9kW-Sg-3kd" secondAttribute="bottom" type="default" id="LpS-6V-9dj"/>
+                            <constraint firstItem="sqJ-qm-zSh" firstAttribute="trailing" secondItem="9kW-Sg-3kd" secondAttribute="trailing" type="default" id="Mya-Au-nGg"/>
+                            <constraint firstItem="sqJ-qm-zSh" firstAttribute="top" secondItem="9kW-Sg-3kd" secondAttribute="top" type="default" id="ftn-f8-1Zc"/>
+                            <constraint firstItem="sqJ-qm-zSh" firstAttribute="leading" secondItem="9kW-Sg-3kd" secondAttribute="leading" type="default" id="ifd-GI-z5n"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="LeD-gv-xsX"/>
                     <connections>
@@ -139,6 +159,9 @@
             <relationships>
                 <relationship kind="outlet" name="recipeImageView" candidateClass="UIImageView"/>
             </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
         </class>
         <class className="UICollectionReusableView" superclassName="UIView">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionReusableView.h"/>
