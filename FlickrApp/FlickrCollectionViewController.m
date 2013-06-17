@@ -16,7 +16,7 @@
 
 
 @interface FlickrCollectionViewController () {
-    NSArray *flickrImages;
+    NSMutableArray *flickrImages;
     BOOL shareEnabled;
     NSMutableArray *selectedPics;
     NSMutableArray *randomPics;
@@ -52,6 +52,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    randomPics = [[NSMutableArray alloc]init];
+    arrayWithImages = [[NSMutableArray alloc]init];
+    
     UIBarButtonItem *anotherButton = [[UIBarButtonItem alloc] initWithTitle:@"Refresh" style:UIBarButtonItemStylePlain target:self action:@selector(loadFromFlickr)];
     self.navigationItem.rightBarButtonItem = anotherButton;
     [self loadFromFlickr];
@@ -63,8 +66,7 @@
 -(void)loadFromFlickr {
    [self fetchUsingASIHTTP];
  //   [self fetch];
-    randomPics = [[NSMutableArray alloc]init];
-    arrayWithImages = [[NSMutableArray alloc]init];
+
     [self parseData];
     
     flickrImages = [NSArray arrayWithObjects:randomPics, nil];
@@ -73,7 +75,13 @@
     collectionViewLayout.sectionInset = UIEdgeInsetsMake(20, 0, 20, 0);
     
     selectedPics = [NSMutableArray array];
+    
 }
+
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    
+}
+
 
 -(void)fetch {
     

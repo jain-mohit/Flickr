@@ -68,7 +68,7 @@
         NSString *message = [NSString stringWithFormat: @"Service not Available: %@ %@",[error localizedDescription],[request responseString]];
         NSLog(@"message is %@",message);
     } else {
-        NSLog(@"response string is %@",[request responseString]);
+//        NSLog(@"response string is %@",[request responseString]);
     }
     
     NSString *string = [request responseString];

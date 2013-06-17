@@ -16,5 +16,6 @@
 @property(nonatomic, strong) NSDictionary *dictionary;
 @property (strong, nonatomic) UIAlertView *loadingAlertView;
 @property(nonatomic, strong) NSMutableArray *flickrArray;
-@property(nonatomic, strong) NSArray *items;
+@property(nonatomic, strong) NSMutableArray *items;
+
 @end
